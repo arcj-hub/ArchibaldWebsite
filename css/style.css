@@ -48,17 +48,18 @@ Grey dark 3: #999
 // --color-primary-dark: #625EAC;
 */
 :root {
-  --color-primary: #FF9671;
-  --color-primary-dark: #c86745;
-  --color-primary-light: #ffc8a0;
-  --color-secondary: #bb8877;
-  --color-secondary-light: #efb8a6;
-  --color-secondary-dark: #895b4b;
-  --color-grey-light-1: #faf9f9;
-  --color-grey-light-2: #f4f2f2;
+  --color-primary: #00658c;
+  --color-primary-dark: #001e2d;
+  --color-primary-light: #c5e7ff;
+  --color-secondary: #b9acc0;
+  --color-secondary-light: #bce9ff;
+  --color-secondary-dark: #dde3ea;
+  --color-secondary-dark-2: #4e616d;
+  --color-grey-light-1: #dde3ea;
+  --color-grey-light-2: #71787e;
   --color-grey-light-3: #f0eeee;
   --color-grey-light-4: #DDDFE7;
-  --color-grey-dark-1:  #333;
+  --color-grey-dark-1:  #41484d;
   --color-grey-dark-2:  #777;
   --color-grey-dark-3:  #999;
   --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
@@ -120,22 +121,23 @@ h1 {
   align-self: end;
   grid-column: grid-start / grid-end;
   grid-row: 1 / 3;
-  min-height: 70rem;
+  min-height: 95rem;
   width: 100%;
   background-size: cover;
   background-blend-mode: soft-light;
-  background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-primary-light)), url(../resources/mobile-optimized/matt-profile-big.jpg); }
+  background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-primary-light)), url(../resources/MD2_9844.jpg); }
   @media only screen and (max-width: 37.5em) {
     .header {
       padding-top: 3rem;
-      background: linear-gradient(to right bottom, #FF9671, #ffc8a0), url(../resources/phone/matt-profile-small.jpg) center;
+      background: linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/MD2_9844.jpg) center;
       background-size: cover; } }
   .header__name {
-    font-size: 6rem;
-    color: var(--color-grey-dark-1);
+    font-size: 5rem;
+    color: var(--color-grey-light-1);
     border-bottom: var(--line);
     box-shadow: var(--shadow-dark); }
   .header__sub {
+    background-color: var(--color-secondary-dark);
     color: #000;
     font-size: 3rem;
     text-decoration-style: wavy;
@@ -167,12 +169,12 @@ h1 {
     justify-content: center;
     align-items: center; }
     .circle-cutout__photo--image {
-      width: 18rem;
-      height: 18rem;
-      border-radius: 50%;
+      width: 19rem;
+      height: 19rem;
+      border-radius: 40%;
       background-size: cover;
       background-blend-mode: multiply;
-      background-image: linear-gradient(to right bottom, rgba(239, 184, 166, 0.8), rgba(137, 91, 75, 0.8)), url(../resources/mobile-optimized/tree-pose-large.jpg); }
+      background-image: linear-gradient(to right bottom, rgba(210, 229, 244, 0.8), rgba(197, 231, 255, 0.8)), url(../resources/MRS-logo.jpg); }
 
 .main {
   grid-row: 3 / -1;
@@ -184,7 +186,8 @@ h1 {
   display: grid;
   grid-template-columns: [info-start] 1fr [info-end];
   grid-gap: 3.5rem;
-  justify-items: center; }
+  justify-items: center;
+  color: var(--color-grey-light-1); }
   @media only screen and (max-width: 75em) {
     .main {
       margin: 0 10rem 10rem 10rem; } }
@@ -216,6 +219,12 @@ h1 {
     .main {
       padding: 15rem 1rem 1rem 1rem; } }
 
+.__long {
+  height: 55rem !important; }
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+    .__long {
+      height: auto !important; } }
+
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -229,6 +238,11 @@ h1 {
   @media only screen and (max-width: 37.5em) {
     .card {
       width: 40rem; } }
+  .card__long {
+    height: 55rem !important; }
+    @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+      .card__long {
+        height: auto !important; } }
   .card__side {
     border-radius: 2rem;
     height: 50rem;
@@ -262,31 +276,15 @@ h1 {
     background-blend-mode: multiply;
     -webkit-clip-path: polygon(0 0, 0 100%, 100% 85%, 100% 0);
     clip-path: polygon(0 0, 0 100%, 100% 85%, 100% 0); }
-    .card__picture--joist {
-      background-image: linear-gradient(to right bottom,
-                        var(--color-secondary-light),
-                        var(--color-secondary-dark)),
-                        url(../resources/mobile-optimized/joist.jpg);
-    }
-    .card__picture--cgb {
-      background-image: linear-gradient(to right bottom,
-                        var(--color-secondary-light),
-                        var(--color-secondary-dark)),
-                        url(../resources/mobile-optimized/joist.jpg);
-    }
     .card__picture--1 {
-      background-image: linear-gradient(to right bottom,
-                        var(--color-secondary-light),
-                        var(--color-secondary-dark)),
-                        url(../resources/mobile-optimized/nat-1-small.jpg);
-    }
+      background-image: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/data-sharing.png); }
     .card__picture--2 {
-      background-image: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/mobile-optimized/coding-1-small.jpg);}
+      background-image: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/software.png); }
     .card__picture--3 {
-      background: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/mobile-optimized/nat-2-small.jpg) center;
+      background: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/teaching.png) center;
       background-size: cover; }
     .card__picture--4 {
-      background-image: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/mobile-optimized/bucha-1-small.jpg); }
+      background-image: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/grant.png); }
     .card__picture--5 {
       background: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/mobile-optimized/lab-2-small.jpg) center;
       background-size: cover; }
@@ -306,44 +304,47 @@ h1 {
       background: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/mobile-optimized/learning-1-small.jpg) center;
       background-size: cover; }
     .card__picture--11 {
-      background: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/mobile-optimized/skills-small.jpg) center;
+      background: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/philosophical-tuna.png) center;
       background-size: cover; }
     .card__picture--12 {
-      background: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/mobile-optimized/volunteer-small.jpg) center;
+      background: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/puffin.png) center;
+      background-size: cover; }
+    .card__picture--publications {
+      background: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/pubsimage.png) center;
       background-size: cover; }
     @media only screen and (max-width: 37.5em) {
       .card__picture--1 {
-        background-image: linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/nat-1-small-600.jpg); }
+        background-image: linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/data-sharing.png); }
       .card__picture--2 {
-        background-image: linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/coding-1-small-600.jpg); }
+        background-image: linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/software.png); }
       .card__picture--3 {
-        background: linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/nat-2-small-600.jpg) center;
+        background: linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/teaching.png) center;
         background-size: cover; }
       .card__picture--4 {
-        background-image: linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/bucha-1-small-600.jpg); }
+        background-image: linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/grant.png); }
       .card__picture--5 {
-        background: linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/lab-2-small-600.jpg) center;
+        background: linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/phone/lab-2-small-600.jpg) center;
         background-size: cover; }
       .card__picture--6 {
-        background: linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/lab-1-small-600.jpg) center;
+        background: linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/phone/lab-1-small-600.jpg) center;
         background-size: cover; }
       .card__picture--7 {
-        background: linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/moving-1-small-600.jpg) center;
+        background: linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/phone/moving-1-small-600.jpg) center;
         background-size: cover; }
       .card__picture--8 {
-        background: linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/breath-1-small-400.jpg) center;
+        background: linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/phone/breath-1-small-400.jpg) center;
         background-size: cover; }
       .card__picture--9 {
-        background: linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/circle-1-small-600.jpg) center;
+        background: linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/phone/circle-1-small-600.jpg) center;
         background-size: cover; }
       .card__picture--10 {
-        background: linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/learning-1-small-600.jpg) center;
+        background: linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/phone/learning-1-small-600.jpg) center;
         background-size: cover; }
       .card__picture--11 {
-        background: linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/skills-small-600.jpg) center;
+        background: linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/philosophical-tuna.png) center;
         background-size: cover; }
       .card__picture--12 {
-        background: linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/volunteer-small-600.jpg) center;
+        background: linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/puffin.png) center;
         background-size: cover; } }
   .card__heading {
     display: flex;
@@ -361,7 +362,7 @@ h1 {
     min-width: 30rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    background-image: linear-gradient(to right bottom, rgba(239, 184, 166, 0.75), rgba(137, 91, 75, 0.75)); }
+    background-image: linear-gradient(to right bottom, rgba(0, 101, 140, 0.75), rgba(0, 76, 107, 0.75)); }
     @media only screen and (max-width: 75em) {
       .card__heading {
         width: 70%; } }
@@ -379,38 +380,36 @@ h1 {
     background-repeat: no-repeat;
     margin-top: 1.5rem;
     align-self: flex-end; }
-    .card__logo--joist {
-      background-image: url(../resources/joist-logo.jpg);
-      height: 5rem;
-      width: 20rem; }
-    .card__logo--cgb {
-      background-image: url(../resources/cga_logo_light.png);
-      height: 5rem;
-      width: 20rem; }
+    .card__logo--box-2 {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end; }
     .card__logo--1 {
-      background-image: url(../resources/woodseer_white.png);
-      height: 5rem;
-      width: 20rem; }
-    .card__logo--2 {
-      background-image: url(../resources/codecore-1.jpg);
-      height: 8rem;
-      width: 8rem;
+      background-image: url(../resources/MRS.png);
+      height: 10rem;
+      width: 10rem;
       border-radius: 1.2rem; }
+    .card__logo--2 {
+      background-image: url(../resources/GIT.png);
+      height: 10rem;
+      width: 10rem;
+      border-radius: 1.2rem;
+      margin-left: 2rem; }
     .card__logo--3 {
-      background-image: url(../resources/mobile-optimized/redline-logo-small-600.png);
+      background-image: url(../resources/matlab.png);
       height: 8rem;
       width: 13.5rem; }
     .card__logo--4 {
-      background-image: url(../resources/bucha-logo.png);
+      background-image: url(../resources/r-studio.png);
       height: 5rem;
       width: 20rem; }
     .card__logo--5 {
-      background-image: url(../resources/mobile-optimized/rise-2-small-200.png);
+      background-image: url(../resources/fsl.png);
       height: 8rem;
       width: 8rem;
       border-radius: 1.2rem; }
     .card__logo--7 {
-      background-image: url(../resources/mobile-optimized/shmoover-1-logo-small-960.jpg);
+      background-image: url(../resources/bash.png);
       background-size: cover;
       height: 8rem;
       width: 13.4rem;
@@ -425,17 +424,19 @@ h1 {
       width: 100%;
       justify-content: space-around; }
     .card__logo--img {
-      height: 8rem;
-      width: 8rem;
+      height: 9rem;
+      width: 9rem;
       border-radius: 1.2rem; }
     .card__logo--11 {
-      background-image: url(../resources/mobile-optimized/ruby-logo-small-600.png); }
+      background-image: url(../resources/UoG.jpg); }
     .card__logo--12 {
-      background-image: url(../resources/mobile-optimized/rails-logo-small-600.png); }
+      background-image: url(../resources/UBC.jpeg); }
     .card__logo--13 {
-      background-image: url(../resources/mobile-optimized/react-logo-small-300.png); }
+      background-image: url(../resources/harvard.png); }
     .card__logo--14 {
-      background-image: url(../resources/js-logo.png); }
+      background-image: url(../resources/JHU.png); }
+    .card__logo--PHILIPS {
+      background-image: url(../resources/PHILIPS.png); }
     .card__logo--15 {
       background-image: url(../resources/ableton-logo.jpg); }
     .card__logo--16 {
@@ -451,7 +452,8 @@ h1 {
       width: 90%; }
       .card__details ul li {
         font-size: 1.8rem;
-        padding: 1rem; }
+        padding: 1rem;
+        color: var(--color-grey-dark-1); }
   .card__skills {
     display: grid;
     grid-template-columns: repeat(2, minmax(20rem, 1fr));
@@ -466,7 +468,8 @@ h1 {
       align-self: center; }
     .card__skills li {
       padding: 1rem;
-      font-size: 1.8rem; }
+      font-size: 1.8rem;
+      color: var(--color-grey-dark-1); }
   @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .card {
       height: auto;
@@ -514,7 +517,7 @@ h1 {
   display: none; }
 
 .navigation__button {
-  background-color: antiquewhite;
+  background-color: #dde3ea;
   height: 7rem;
   width: 7rem;
   position: fixed;
@@ -597,7 +600,7 @@ h1 {
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
-  color: var(--color-secondary-dark);
+  color: var(--color-secondary-dark-2);
   transform: translateX(1rem); }
 
 .navigation__checkbox:checked ~ .navigation__background {

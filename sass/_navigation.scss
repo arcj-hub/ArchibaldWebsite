@@ -1,11 +1,11 @@
 .navigation {
-  
+
   &__checkbox {
     display: none;
   }
 
   &__button {
-    background-color: antiquewhite;
+    background-color: #dde3ea;
     height: 7rem;
     width: 7rem;
     position: fixed;
@@ -49,7 +49,7 @@
   }
 
   &__nav {
-    height: 100vh; 
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -57,7 +57,7 @@
     opacity: 0;
     width: 0;
     visibility: hidden;
-    
+
     transition: all .6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
@@ -98,7 +98,7 @@
 
     &:hover, &:active {
       background-position: 100%;
-      color: var(--color-secondary-dark);
+      color: var(--color-secondary-dark-2);
       transform: translateX(1rem);
     }
   }
@@ -107,14 +107,14 @@
   &__checkbox:checked ~ &__background {
     transform: scale(80);
   }
-  
+
   &__checkbox:checked ~ &__nav {
-    visibility: visible; 
+    visibility: visible;
     opacity: 1;
-    width: 100%;    
+    width: 100%;
   }
 
- 
+
 
   // BURGER ICON
   &__icon {
@@ -127,7 +127,7 @@
       width: 3rem;
       height: 2px;
       background-color: var(--color-grey-dark-3);
-      display: inline-block; 
+      display: inline-block;
     }
 
     &::before,

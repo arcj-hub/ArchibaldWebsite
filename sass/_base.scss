@@ -32,7 +32,7 @@ Grey dark 3: #999
   // // COLORS FOR LINEAR GRADIENT
   // --color-secondary-light: #2998ff;
   // --color-secondary-dark: #5643fa;
-  
+
   // COLORS LIGHT MODE
   // BACKGROUND COLOR
   // --color-primary: #FF9671;
@@ -44,29 +44,30 @@ Grey dark 3: #999
   // --color-secondary-light: #845EC2;
   // --color-secondary-dark: #2C73D2;
 
-  
-  
+
+
   // COLORS FLOWER MODE
   // BACKGROUND COLOR
-  --color-primary: #FF9671;
+  --color-primary: #00658c;
   // BEHIND CARDS
-  --color-primary-dark: #c86745;
-  --color-primary-light: #ffc8a0;
+  --color-primary-dark: #001e2d;
+  --color-primary-light: #c5e7ff;
   // CARD BACKGROUND
   // COLORS FOR LINEAR GRADIENT
-  --color-secondary: #bb8877;
-  --color-secondary-light: #efb8a6;
-  --color-secondary-dark: #895b4b;
+  --color-secondary: #b9acc0;
+  --color-secondary-light: #bce9ff;
+  --color-secondary-dark: #dde3ea;
+  --color-secondary-dark-2: #4e616d;
 
 
 // TEXT COLORS
-  --color-grey-light-1: #faf9f9;
-  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-1: #dde3ea;
+  --color-grey-light-2: #71787e;
   --color-grey-light-3: #f0eeee;
   --color-grey-light-4: #DDDFE7;
 
 // SHADOW COLORS
-  --color-grey-dark-1:  #333;
+  --color-grey-dark-1:  #41484d;
   --color-grey-dark-2:  #777;
   --color-grey-dark-3:  #999;
 
@@ -99,11 +100,11 @@ html {
   font-size: 62.5%;
 
   @include respond(tab-land) { // width LESS THAN 1200 px?
-    font-size: 56.25%; // 1rem now = 9px; 9/16px = 56.25% 
+    font-size: 56.25%; // 1rem now = 9px; 9/16px = 56.25%
   }
-  
+
   @include respond(tab-port) { // width LESS THAN 900 px?
-    font-size: 50%; // 1rem now = 8px; 8/16px = 50% 
+    font-size: 50%; // 1rem now = 8px; 8/16px = 50%
   }
 
   @include respond(phone) { // width LESS THAN 600 px?

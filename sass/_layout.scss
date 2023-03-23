@@ -36,35 +36,38 @@
   align-self: end;
   grid-column: grid-start / grid-end;
   grid-row: 1 / 3;
-  min-height: 70rem;
+  // min-height: 70rem;
+  min-height: 95rem;
   width: 100%;
 
   // background-color: transparent;
   background-size: cover;
   background-blend-mode: soft-light;
-  background-image:  linear-gradient(to right bottom, var(--color-primary), var(--color-primary-light)), url(../resources/mobile-optimized/matt-profile-big.jpg);
+  // background-image:  linear-gradient(to right bottom, var(--color-primary), var(--color-primary-light)), url(../resources/mobile-optimized/matt-profile-big.jpg);
+  background-image:  linear-gradient(to right bottom, var(--color-primary), var(--color-primary-light)), url(../resources/MD2_9844.jpg);
 
   @include respond(phone) { // width LESS THAN 600 px?
     padding-top: 3rem;
-    background:  linear-gradient(to right bottom,#FF9671, #ffc8a0), url(../resources/phone/matt-profile-small.jpg) center;
+    background:  linear-gradient(to right bottom,#00658c, #c5e7ff), url(../resources/MD2_9844.jpg) center;
     background-size: cover;
   }
 
   &__name {
-    font-size: 6rem;
-    color: var(--color-grey-dark-1);
+    // background-color: var(--color-secondary-dark);
+    font-size: 5rem;
+    color: var(--color-grey-light-1);
     border-bottom: var(--line);
     box-shadow: var(--shadow-dark);
   }
   &__sub {
-    // background-color: var(--color-secondary-dark);
+    background-color: var(--color-secondary-dark);
     color: #000;
     font-size: 3rem;
     text-decoration-style: wavy;
     padding-top: 1rem;
   }
 }
-  
+
 .circle-cutout {
   // aligning the item in the center of the COLUMN (horizantal) AXIS
   grid-row: 2 / 4;
@@ -77,13 +80,13 @@
   height: 25rem;
   border-radius: 50%;
   background-color: var(--color-primary-dark);
-  
+
   // center the circle
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   &__photo {
     width: 20rem;
     height: 20rem;
@@ -91,21 +94,21 @@
     background-color: var(--color-primary-light);
     box-shadow: var(--shadow-dark);
     z-index: 2;
-    
+
     // center the text
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     &--image {
       // clip-path: circle(45% at 50% 50%); FOR IMG TAG
-      width: 18rem;
-      height: 18rem;
-      border-radius: 50%;
+      width: 19rem;
+      height: 19rem;
+      border-radius: 40%;
       background-size: cover;
       background-blend-mode: multiply;
-      background-image:  linear-gradient(to right bottom, rgba(#efb8a6, .8), rgba(#895b4b, .8)), url(../resources/mobile-optimized/tree-pose-large.jpg);
+      background-image:  linear-gradient(to right bottom, rgba(#d2e5f4, .8), rgba(#c5e7ff, .8)), url(../resources/MRS-logo.jpg);
     }
   }
 }
@@ -117,11 +120,11 @@
   padding: 15rem 5rem 5rem 5rem;
   border-radius: 8px;
   text-align: left;
-  
   display: grid;
   grid-template-columns: [info-start] 1fr [info-end];
   grid-gap: 3.5rem;
   justify-items: center;
+  color: var(--color-grey-light-1);
 
   @include respond(tab-land) { // width LESS THAN 1200 px?
     margin: 0 10rem 10rem 10rem;
@@ -162,6 +165,15 @@
   }
 }
 
+.__long {
+  height: 55rem !important;
+
+  @media only screen and (max-width: 56.25em),
+         only screen and (hover:none) {
+    height: auto !important;
+  }
+}
+
 // Card flip functionality
 .card {
   perspective: 150rem;
@@ -172,13 +184,22 @@
   max-width: 90rem;
 
   @include respond(tab-land) { // width 900 - 1200 px?
-    height: 55rem; 
+    height: 55rem;
   }
 
   @include respond(phone) { // width LESS THAN 600 px?
-    width: 40rem; 
+    width: 40rem;
   }
-  
+
+  &__long {
+    height: 55rem !important;
+
+    @media only screen and (max-width: 56.25em),
+           only screen and (hover:none) {
+      height: auto !important;
+    }
+  }
+
   &__side {
     border-radius: 2rem;
     height: 50rem;
@@ -192,11 +213,11 @@
     overflow: hidden;
 
     @include respond(tab-land) { // width 900 - 1200 px?
-      height: 55rem; 
+      height: 55rem;
     }
 
     @include respond(phone) { // width LESS THAN 600 px?
-      width: 40rem; 
+      width: 40rem;
     }
 
     &--front {
@@ -225,17 +246,17 @@
     clip-path: polygon(0 0, 0 100%, 100% 85%, 100% 0);
 
     &--1 {
-      background-image:  linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/mobile-optimized/nat-1-small.jpg);
+      background-image:  linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/data-sharing.png);
     }
     &--2 {
-      background-image:  linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/mobile-optimized/coding-1-small.jpg);
+      background-image:  linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/software.png);
     }
     &--3 {
-      background:  linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/mobile-optimized/nat-2-small.jpg) center;
+      background:  linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/teaching.png) center;
       background-size: cover;
     }
     &--4 {
-      background-image:  linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/mobile-optimized/bucha-1-small.jpg);
+      background-image:  linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/grant.png);
     }
     &--5 {
       background:  linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/mobile-optimized/lab-2-small.jpg) center;
@@ -262,58 +283,62 @@
       background-size: cover;
     }
     &--11 {
-      background:  linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/mobile-optimized/skills-small.jpg) center;
+      background:  linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/philosophical-tuna.png) center;
       background-size: cover;
     }
     &--12 {
-      background:  linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/mobile-optimized/volunteer-small.jpg) center;
+      background:  linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/puffin.png) center;
+      background-size: cover;
+    }
+    &--publications {
+      background:  linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark)), url(../resources/pubsimage.png) center;
       background-size: cover;
     }
 
     @include respond(phone) { // width LESS THAN 600 px?
       &--1 {
-      background-image: linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/nat-1-small-600.jpg);
+      background-image: linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/data-sharing.png);
       }
       &--2 {
-        background-image: linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/coding-1-small-600.jpg);
+        background-image: linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/software.png);
       }
       &--3 {
-        background:  linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/nat-2-small-600.jpg) center;
+        background:  linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/teaching.png) center;
         background-size: cover;
       }
       &--4 {
-        background-image:  linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/bucha-1-small-600.jpg);
+        background-image:  linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/grant.png);
       }
       &--5 {
-        background:  linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/lab-2-small-600.jpg) center;
+        background:  linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/phone/lab-2-small-600.jpg) center;
         background-size: cover;
       }
       &--6 {
-        background:  linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/lab-1-small-600.jpg) center;
+        background:  linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/phone/lab-1-small-600.jpg) center;
         background-size: cover;
       }
       &--7 {
-        background:  linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/moving-1-small-600.jpg) center;
+        background:  linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/phone/moving-1-small-600.jpg) center;
         background-size: cover;
       }
       &--8 {
-        background:  linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/breath-1-small-400.jpg) center;
+        background:  linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/phone/breath-1-small-400.jpg) center;
         background-size: cover;
       }
       &--9 {
-        background:  linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/circle-1-small-600.jpg) center;
+        background:  linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/phone/circle-1-small-600.jpg) center;
         background-size: cover;
       }
       &--10 {
-        background:  linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/learning-1-small-600.jpg) center;
+        background:  linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/phone/learning-1-small-600.jpg) center;
         background-size: cover;
       }
       &--11 {
-        background:  linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/skills-small-600.jpg) center;
+        background:  linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/philosophical-tuna.png) center;
         background-size: cover;
       }
       &--12 {
-        background:  linear-gradient(to right bottom, #efb8a6, #895b4b), url(../resources/phone/volunteer-small-600.jpg) center;
+        background:  linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/puffin.png) center;
         background-size: cover;
       }
     }
@@ -337,16 +362,16 @@
     min-width: 30rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    background-image: linear-gradient(to right bottom, rgba(#efb8a6, .75), rgba(#895b4b, .75));
+    background-image: linear-gradient(to right bottom, rgba(#00658c, .75), rgba(#004c6b, .75));
 
     @include respond(tab-land) { // width 900 - 1200 px?
-      width: 70%; 
+      width: 70%;
     }
     @include respond(tab-port) { // width 600 - 900 px?
-      width: 45rem; 
+      width: 45rem;
     }
     @include respond(phone) { // width LESS THAN 600 px?
-      width: 35rem; 
+      width: 35rem;
     }
     @include respond(desktop) { // width GREATER THAN 1200 px?
       width: 50rem;
@@ -359,47 +384,56 @@
     margin-top: 1.5rem;
     align-self: flex-end;
     // MUST ASSUME code is ACCESS FROM STYLE.CSS file => find url image directory from there
-    // WOODSEER
-    &--1 {
-      background-image: url(../resources/woodseer_white.png);
-      height: 5rem;
-      width: 20rem;
+    // MRS HUB
+    &--box-2 {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
     }
-    // CODECORE
-    &--2 {
-      background-image: url(../resources/codecore-1.jpg);
-      height: 8rem;
-      width: 8rem;
+
+    &--1 {
+      background-image: url(../resources/MRS.png);
+      height: 10rem;
+      width: 10rem;
+
       border-radius: 1.2rem;
     }
-    // REDLINE
+    // GIT
+    &--2 {
+      background-image: url(../resources/GIT.png);
+      height: 10rem;
+      width: 10rem;
+      border-radius: 1.2rem;
+      margin-left: 2rem;
+    }
+    // MATLAB
     &--3 {
-      background-image: url(../resources/mobile-optimized/redline-logo-small-600.png);
+      background-image: url(../resources/matlab.png);
       height: 8rem;
       width: 13.5rem;
     }
-    // BUCHA
+    // R Studio
     &--4 {
-      background-image: url(../resources/bucha-logo.png);
+      background-image: url(../resources/r-studio.png);
       height: 5rem;
       width: 20rem;
     }
-    // RISE
+    // FSL
     &--5 {
-      background-image: url(../resources/mobile-optimized/rise-2-small-200.png);
+      background-image: url(../resources/fsl.png);
       height: 8rem;
       width: 8rem;
       border-radius: 1.2rem;
     }
-    // SHMOOVER
+    // BASH
     &--7 {
-      background-image: url(../resources/mobile-optimized/shmoover-1-logo-small-960.jpg);
+      background-image: url(../resources/bash.png);
       background-size: cover;
       height: 8rem;
       width: 13.4rem;
       border-radius: 1.2rem;
     }
-    // BREATHE
+    // FREESURFER
     &--8 {
       background-image: url(../resources/mobile-optimized/just-breathing-logo-small-600.png);
       height: 8rem;
@@ -411,29 +445,33 @@
       display: flex;
       width: 100%;
       justify-content: space-around;
-    
+
     }
 
     &--img {
-      height: 8rem;
-      width: 8rem;
+      height: 9rem;
+      width: 9rem;
       border-radius: 1.2rem;
     }
-    // RUBY
+    // GUELPH
     &--11 {
-      background-image: url(../resources/mobile-optimized/ruby-logo-small-600.png);
+      background-image: url(../resources/UoG.jpg);
     }
-    // RAILS
+    // UBC
     &--12 {
-      background-image: url(../resources/mobile-optimized/rails-logo-small-600.png);
+      background-image: url(../resources/UBC.jpeg);
     }
-    // REACT
+    // HARVARD
     &--13 {
-      background-image: url(../resources/mobile-optimized/react-logo-small-300.png);
+      background-image: url(../resources/harvard.png);
     }
-    // JAVASCRIPT
+    // JHU
     &--14 {
-      background-image: url(../resources/js-logo.png);
+      background-image: url(../resources/JHU.png);
+    }
+    // PHILIPS
+    &--PHILIPS {
+      background-image: url(../resources/PHILIPS.png);
     }
     //ABLETON
     &--15 {
@@ -443,7 +481,7 @@
     &--16 {
       background-image: url(../resources/mercyships-logo.jpg);
     }
-    // ONE YOGA 
+    // ONE YOGA
     &--17 {
       background-image: url(../resources/mobile-optimized/oneyoga-logo-small-450.jpg);
     }
@@ -461,6 +499,7 @@
       li {
         font-size: 1.8rem;
         padding: 1rem;
+        color: var(--color-grey-dark-1);
       }
     }
   }
@@ -471,12 +510,12 @@
     padding: 3rem;
     grid-row-gap: 2rem;
     text-align: left;
-    
+
     h3 {
       justify-self: flex-start;
       padding-left: 3rem;
     }
-    
+
     ul {
       justify-self: center;
       align-self: center;
@@ -485,6 +524,7 @@
     li {
       padding: 1rem;
       font-size: 1.8rem;
+      color: var(--color-grey-dark-1);
     }
   }
 
@@ -495,12 +535,12 @@
     border-radius: 2rem;
     background-color: var(--color-primary-light);
     box-shadow: var(--shadow-dark);
-    
+
     &__side {
       position: relative;
-      height: auto; 
+      height: auto;
       box-shadow: none;
-      
+
       &--front {
         overflow: visible;
         z-index: 1;
@@ -517,7 +557,7 @@
       border-top-left-radius: 2rem;
       border-top-right-radius: 2rem;
     }
-    
+
     &:hover &__side--front {
       transform: rotateY(0deg);
     }
@@ -525,7 +565,7 @@
     &__heading {
       z-index: 100;
     }
-    
+
     &__details {
       padding: 2rem 1rem 2rem 1rem;
       width: 100%;
