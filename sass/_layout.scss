@@ -48,7 +48,7 @@
 
   @include respond(phone) { // width LESS THAN 600 px?
     padding-top: 3rem;
-    background:  linear-gradient(to right bottom,#00658c, #c5e7ff), url(../resources/bannerpic.JPG) center;
+    background:  linear-gradient(to right bottom,#00658c, #c5e7ff), url(../resources/bannerpic-small.jpeg) center;
     background-size: cover;
   }
 
