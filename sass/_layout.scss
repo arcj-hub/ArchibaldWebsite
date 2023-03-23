@@ -44,7 +44,7 @@
   background-size: cover;
   background-blend-mode: soft-light;
   // background-image:  linear-gradient(to right bottom, var(--color-primary), var(--color-primary-light)), url(../resources/mobile-optimized/matt-profile-big.jpg);
-  background-image:  linear-gradient(to right bottom, var(--color-primary), var(--color-primary-light)), url(../resources/MD2_9844.jpg);
+  background-image:  linear-gradient(to right bottom, var(--color-primary), var(--color-primary-light)), url(../resources/MD2_9844.jpeg);
 
   @include respond(phone) { // width LESS THAN 600 px?
     padding-top: 3rem;
@@ -108,7 +108,7 @@
       border-radius: 40%;
       background-size: cover;
       background-blend-mode: multiply;
-      background-image:  linear-gradient(to right bottom, rgba(#d2e5f4, .8), rgba(#c5e7ff, .8)), url(../resources/MRS-logo.jpg);
+      background-image:  linear-gradient(to right bottom, rgba(#d2e5f4, .8), rgba(#c5e7ff, .8)), url(../resources/MRS-logo.jpeg);
     }
   }
 }
