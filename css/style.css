@@ -125,11 +125,11 @@ h1 {
   width: 100%;
   background-size: cover;
   background-blend-mode: soft-light;
-  background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-primary-light)), url(../resources/MD2_9844.jpg); }
+  background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-primary-light)), url(../resources/bannerpic.JPG); }
   @media only screen and (max-width: 37.5em) {
     .header {
       padding-top: 3rem;
-      background: linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/MD2_9844.jpg) center;
+      background: linear-gradient(to right bottom, #00658c, #c5e7ff), url(../resources/bannerpic.JPG) center;
       background-size: cover; } }
   .header__name {
     font-size: 5rem;
@@ -174,7 +174,7 @@ h1 {
       border-radius: 40%;
       background-size: cover;
       background-blend-mode: multiply;
-      background-image: linear-gradient(to right bottom, rgba(210, 229, 244, 0.8), rgba(197, 231, 255, 0.8)), url(../resources/MRS-logo.jpg); }
+      background-image: linear-gradient(to right bottom, rgba(210, 229, 244, 0.8), rgba(197, 231, 255, 0.8)), url(../resources/MRS-logo.jpeg); }
 
 .main {
   grid-row: 3 / -1;
